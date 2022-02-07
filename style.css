@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  font-family: "Outfit";
+  overflow-y: hidden;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  background-color: hsl(217, 54%, 11%);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(216, 50%, 16%);
+  margin: 5rem 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: hsl(215, 51%, 70%);
+}
+
+.img {
+  position: relative;
+}
+
+.img img {
+  max-width: 100%;
+  border-radius: inherit;
+}
+
+.overlay {
+  width: 100%;
+  background-color: cyan;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+}
+
+#icon {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.overlay, #icon{
+    visibility: hidden;
+}
+
+.img:hover #icon, .img:hover .overlay{
+    visibility: visible;
+    cursor: pointer;
+}
+
+h2 {
+  color: white;
+}
+
+p {
+  margin-top: 0;
+  font-weight: 300;
+}
+
+.eth {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px hsl(215, 32%, 27%) solid;
+}
+
+.eth img {
+  margin-right: 0.4rem;
+}
+
+.eth span:first-of-type {
+  color: hsl(178, 100%, 50%);
+}
+
+.ath {
+  display: flex;
+  align-items: center;
+}
+
+.ath img {
+  width: 2rem;
+  margin-right: 1rem;
+  border: white solid 2px;
+  border-radius: 75px;
+}
+
+.ath p {
+  margin: 0;
+}
+
+.ath span {
+  color: white;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+h2:hover,
+.ath span:hover {
+  cursor: pointer;
+  color: cyan;
+}
+
+@media screen and (min-width: 376px) {
+  .card {
+    width: 25%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+  }
+
+  .attribution {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+  }
+}
